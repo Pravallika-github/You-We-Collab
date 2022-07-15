@@ -1,0 +1,34 @@
+.table{
+    max-width: 90%;
+    text-align: center;
+    margin: auto;
+    background-color: rgb(4, 3, 66);
+    color: white;  
+    border-color: azure;
+    border-width: 2px;
+}
+.btn{
+    background-color: darkorange;
+    color: white;
+    padding-left: 10px;
+    
+}
+.taba1{
+    text-align: center;
+    background-color: rgb(11, 177, 33);
+    color: white;
+    font-weight: bold;
+}
+.taba2{
+    text-align: center;
+    background-color: rgb(170, 167, 8);
+    color: white;
+    font-weight: bold;
+}
+
+.taba3{
+    text-align: center;
+    background-color: rgb(167, 7, 55);
+    color: white;
+    font-weight: bold;
+}

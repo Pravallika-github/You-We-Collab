@@ -1,0 +1,28 @@
+<form #eventForm="ngForm" (ngSubmit)="addEvent()">
+    <table class="table">
+      <!--Event Name-->
+      <tr>
+        <td class="tc1 form-label">Event Name</td>
+        <td class="tc2">
+          <input [(ngModel)]="event.eventName" type="text" name="eventName"
+          #eName="ngModel" required class="formCon"></td>
+      </tr>
+      <tr *ngIf="eName.invalid && eName.touched"><td></td>
+        <td class="text-danger">Event name can not be empty</td></tr>
+
+      <!--Event Cost-->
+      <tr>
+        <td class="tc1">Event Cost</td>
+        <td class="tc2">
+          <input [(ngModel)]="event.eventCost" type="number" name="evenyCost"
+           #eCost="ngModel" required min=1000 class="formCon"></td>
+      </tr>
+    
+    <tr *ngIf="eCost.invalid && eCost.touched"><td></td>
+      <td class="text-danger">Event cost can not be less than 1000</td></tr>
+     
+    </table>
+    <div class="text-center mt-3">
+      <input type="submit" [disabled]="eventForm.form.invalid" class="btn" value="ADD">
+  </div>
+</form>

@@ -1,0 +1,36 @@
+.bread{
+    margin-top: 75px;
+}
+.heading{
+    background-color: rgba(7, 167, 100, 0.9);
+    color: white;
+    border-radius: 10%;
+    width: 90%;
+    margin: auto;
+}
+.row{
+    background-color: rgb(2, 36, 6);
+    width: 80%;
+    margin: auto;
+    border-radius: 5%;
+    color: yellow;
+}
+.row:hover{
+    background-color: darkgray;
+
+}
+.tab1{
+    padding: 6px;
+    background-color: rgb(60, 5, 92);
+    border: none;
+    border-radius: 10%;
+    color: white;
+}
+.tab2{
+    padding: 6px;
+    background-color: rgb(235, 12, 12);
+    border: none;
+    border-radius: 10%;
+    color: white;
+    margin-left: 22%;
+}

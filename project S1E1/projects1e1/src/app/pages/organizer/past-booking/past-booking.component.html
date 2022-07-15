@@ -1,0 +1,34 @@
+<div class="bread">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a routerLink="/organizer" routerLinkActive="router-link-active" >Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">History</li>
+        </ol>
+      </nav>
+  </div>
+
+<h3 class="text-center">Booking History</h3>
+<div class="pt-2" *ngFor="let booking of bookings">
+<div class="container mb-1">
+    <div class="row">
+       
+        <div class="col-2"><h5>Venue</h5></div>
+        <div class="col-2">{{booking.venueName}}</div>
+        <div class="col-2"><h5>Event</h5></div>
+        <div class="col-3">{{booking.eventName}}</div>
+        <div class="col-1"></div>
+        <div class="col-2 "><button [routerLink]="'/organizer/bookDetailsP/'+booking.bookingId" class="btn mt-1">Details</button></div>
+    </div>
+
+    <div class="row mt-1">
+        <div class="col-2"><h5>Date</h5></div>
+        <div class="col-2">{{booking.date}}</div>
+        <div class="col-2"><h5>Total Cost</h5></div>
+        <div class="col-2">{{booking.totalCost}}</div>
+        <div class="col-2"><h5>Booked By</h5></div>
+        <div class="col-2 ">{{booking.firstName}} {{booking.lastName}}</div>
+    </div>
+    
+</div>
+    
+</div>

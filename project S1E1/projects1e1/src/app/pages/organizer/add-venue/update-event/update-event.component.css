@@ -1,0 +1,22 @@
+.table{
+    max-width: 90%;
+    text-align: center;
+    margin: auto;
+    background-color: rgb(40, 5, 56);
+    color: white;
+}
+.btn{
+    text-align: center;
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
+}
+.tc2{
+    color: white;
+    width: fit-content;
+}
+.formCon{
+    color: white;
+   width: 100%;
+   border-color: azure;
+}

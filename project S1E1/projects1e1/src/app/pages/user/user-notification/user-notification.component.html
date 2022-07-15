@@ -1,0 +1,27 @@
+<div class="bread"><nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/user">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Notification</li>
+    </ol>
+  </nav></div>
+
+<div class="" >
+<div *ngFor="let noti of notifications" class="container mb-1">
+    <div  class="row head">
+       
+        <div class="col">{{noti.date}}</div>
+        <div class="col">{{noti.time}}</div>
+        <div class="col">
+            <a class="delNot" (click)="deleteNoti(noti.notificationId)">Delete</a>
+        </div>
+
+    </div>
+
+    <div class="row mt-1 body">
+        
+        <div class="col">{{noti.message}}</div>
+    </div>
+    
+</div>
+    
+</div>

@@ -1,0 +1,88 @@
+<div class="bread">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a routerLink="/admin" routerLinkActive="router-link-active" >Home</a></li>
+          <li class="breadcrumb-item"><a routerLink="/admin/viewBookings" routerLinkActive="router-link-active" >Bookings</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Details</li>
+        </ol>
+      </nav>
+  </div>
+<div class="container">
+    <div class="row">
+    <div class="heading pb-1 mb-3 col">
+       <h3 class="text-center">Booking Details</h3>
+           <div class="text-center mt-3">
+                <div class="row mb-2">
+                   <div class="col">Booking Id</div>
+                   <div class="col">#{{booking.bookingId}}#</div>
+            </div>
+            <div class="row mb-2">
+                   <div class="col">Venue</div>
+                   <div class="col">{{booking.venueName}} (#{{booking.venueId}})</div>
+            </div>
+            <div class="row mb-2">
+                   <div class="col">Venue Contact</div>
+                   <div class="col">{{booking.venueContact}}</div>
+            </div> 
+            <div class="row mb-2">
+                <div class="col">Event</div>
+                <div class="col">{{booking.eventName}}</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">Date</div>
+                <div class="col">{{booking.date}}</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">User</div>
+                <div class="col">{{booking.firstName}} {{booking.lastName}}</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">Contact</div>
+                <div class="col">{{booking.phoneNumber}}</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">Food</div>
+                <div class="col">{{booking.foodItemName}}</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">Equipment</div>
+                <div class="col">{{booking.equipmentName}}</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">Guests</div>
+                <div class="col">{{booking.guestCount}}</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">Event Cost</div>
+                <div class="col">{{booking.eventCost}}</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">Food Cost</div>
+                <div class="col">{{booking.foodItemCost}}</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">Equipment Cost</div>
+                <div class="col">{{booking.equipmentCost}}</div>
+            </div> 
+            <div class="row mb-2">
+                <div class="col">Total Cost</div>
+                <div class="col">{{booking.totalCost}}</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">Payment Status</div>
+                <div class="col">{{booking.paymentStatus}}</div>
+            </div>               
+        
+        
+            <div class="mt-3 mb-3 tabs text-center ps-3">
+              <button routerLink="/admin/viewBookings"  class="tab1">BACK</button>
+            </div >
+        </div>
+    </div>
+    
+              
+         
+         
+        
+        
+       

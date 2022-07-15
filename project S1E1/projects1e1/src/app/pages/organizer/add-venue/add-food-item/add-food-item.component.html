@@ -1,0 +1,28 @@
+<form #foodItemForm="ngForm" (ngSubmit)="addFoodItem()">
+  <table class="table">
+    <!--Food Item Name-->
+    <tr>
+      <td class="tc1 form-label">Food Item Name</td>
+      <td class="tc2">
+        <input [(ngModel)]="foodItem.foodItemName" type="text" name="foodItemName"
+        #fName="ngModel" required class="formCon"></td>
+    </tr>
+    <tr *ngIf="fName.invalid && fName.touched"><td></td>
+      <td class="text-danger">Food Item name can not be empty</td></tr>
+
+    <!--Food Item Cost-->
+    <tr>
+      <td class="tc1">Food Item Cost</td>
+      <td class="tc2">
+        <input [(ngModel)]="foodItem.foodItemCost" type="number" name="foodItemCost"
+         #fCost="ngModel" required min=10 class="formCon"></td>
+    </tr>
+  
+  <tr *ngIf="fCost.invalid && fCost.touched"><td></td>
+    <td class="text-danger">Food Item cost can not be less than 10</td></tr>
+   
+  </table>
+  <div class="text-center mt-3">
+    <input type="submit" [disabled]="foodItemForm.form.invalid" class="btn" value="ADD">
+</div>
+</form>

@@ -1,0 +1,69 @@
+<div class="bread">
+  <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/organizer" routerLinkActive="router-link-active" >Home</a></li>
+        <li class="breadcrumb-item"><a routerLink="/organizer/manageVenue" routerLinkActive="router-link-active" >Manage</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Add Veneu</li>
+      </ol>
+    </nav>
+</div>
+<div class="container">
+<h4 class="text-center">Add New Venue</h4>
+      <form #venueForm="ngForm" (ngSubmit)="addVenue()">
+        <table class="table">
+
+
+            <!--Venue Name-->
+          <tr >
+            <td class="tc1 form-label">Venue Name</td>
+            <td class="tc2">
+                <input [(ngModel)]="venue.venueName" name="venueName" type="text" 
+                 #vName="ngModel" required  class="formCon"></td>
+          </tr>
+          <tr *ngIf="vName.invalid && vName.touched">
+              <td></td>
+              <td><small class="text-danger">Venue Name is Required</small></td>
+          </tr>
+
+
+          <!--Venue Place-->
+          <tr >
+            <td class="tc1">Venue Place</td>
+            <td class="tc2">
+                <input [(ngModel)]="venue.venuePlace" name="venuePlace" type="text" 
+                #vPlace="ngModel" required class="formCon"></td>
+          </tr>
+          <tr *ngIf="vPlace.invalid && vPlace.touched">
+            <td></td>
+            <td><small class="text-danger">Venue Place is Required</small></td>
+        </tr>
+
+
+
+          <!--Venue Contact-->
+          <tr >
+            <td class="tc1">Venue Contact</td>
+            <td class="tc2">
+                <input [(ngModel)]="venue.venueContact" name="venueContact" type="tel" 
+                #vContact="ngModel" pattern="[7-9]{1}[0-9]{9}" required class="formCon"></td>
+          </tr>
+          <tr *ngIf="vContact.errors && vPlace.touched">
+            <td></td>
+            <td><small class="text-danger" 
+                *ngIf="vContact.errors.required" >Venue Contact is Required</small>
+                <small class="text-danger" 
+                *ngIf="vContact.errors.pattern" >Contact should have 10 digits starting with 7,8 or 9</small>
+            </td>
+        </tr>
+
+        </table>
+        <div class="text-center mt-3">
+            <input type="submit" [disabled]="venueForm.form.invalid" class="btn" value="ADD">
+        </div>
+    </form>
+  </div> 
+     
+     
+    
+    
+   

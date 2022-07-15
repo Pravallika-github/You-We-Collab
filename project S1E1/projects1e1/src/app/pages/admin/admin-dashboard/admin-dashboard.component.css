@@ -1,0 +1,13 @@
+.container-fluid{
+   
+    position: fixed;
+    z-index: 1;
+
+}
+.mainContent{
+    margin-top: 3em;
+    
+}
+.navv{
+    z-index: 2;
+}

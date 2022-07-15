@@ -1,0 +1,34 @@
+<div class="bread">
+  <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/admin" routerLinkActive="router-link-active" >Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Venues</li>
+      </ol>
+    </nav>
+</div>
+
+<div class="container">        
+    <table class="table table-dark table-hover">
+      <thead>
+        <tr class="text-center">
+          
+          <th>Name</th>
+          <th>Place</th>
+          <th>Contact</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="text-center" *ngFor="let venue of venues" >
+          
+          <td >{{venue.venueName}}</td>
+          <td >{{venue.venuePlace}}</td>
+          <td >{{venue.venueContact}}</td>
+          <td>
+          <a ><button [routerLink]="'/admin/venueDetails/'+venue.venueId" class="btn btn-warning  me-2">Details</button></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

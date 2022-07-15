@@ -1,0 +1,185 @@
+body {
+    font-family: 'Roboto';font-size: 16px;
+  }
+  
+  .aboutus-section {
+    padding: 90px 0;
+  }
+  .aboutus-title {
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: 32px;
+    margin: 0 0 39px;
+    padding: 0 0 11px;
+    position: relative;
+    text-transform: uppercase;
+    color: #000;
+  }
+  .aboutus-title::after {
+    background: #fdb801 none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 54px;
+  }
+  .aboutus-text {
+    color: #606060;
+    font-size: 13px;
+    line-height: 22px;
+    margin: 0 0 35px;
+  }
+  
+  a:hover, a:active {
+    color: #ffb901;
+    text-decoration: none;
+    outline: 0;
+  }
+  .aboutus-more {
+    border: 1px solid #fdb801;
+    border-radius: 25px;
+    color: #fdb801;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0;
+    padding: 7px 20px;
+    text-transform: uppercase;
+  }
+  .feature .feature-box .iconset {
+    background: #fff none repeat scroll 0 0;
+    float: left;
+    position: relative;
+    width: 18%;
+  }
+  .feature .feature-box .iconset::after {
+    background: #fdb801 none repeat scroll 0 0;
+    content: "";
+    height: 150%;
+    left: 43%;
+    position: absolute;
+    top: 100%;
+    width: 1px;
+  }
+  
+  .feature .feature-box .feature-content h4 {
+    color: #0f0f0f;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin: 0 0 5px;
+  }
+  
+  
+  .feature .feature-box .feature-content {
+    float: left;
+    padding-left: 28px;
+    width: 78%;
+  }
+  .feature .feature-box .feature-content h4 {
+    color: #0f0f0f;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin: 0 0 5px;
+  }
+  .feature .feature-box .feature-content p {
+    color: #606060;
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .icon {
+    color : #f4b841;
+    padding:0px;
+    font-size:40px;
+    border: 1px solid #fdb801;
+    border-radius: 100px;
+    color: #fdb801;
+    font-size: 28px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    width: 70px;
+  }
+  
+  
+  
+  
+      /* Conatct start */
+  
+    .header-title
+    {
+      text-align: center;
+      color:#00bfff;
+    }
+  
+    #tip 
+    {
+        display:none;  
+    }
+  
+    .fadeIn
+    {
+      animation-duration: 3s;
+    }
+  
+    .form-control
+    {
+      border-radius:0px;
+      border:1px solid #EDEDED;
+    }
+  
+    .form-control:focus
+    {
+      border:1px solid #00bfff;
+    }
+  
+    .textarea-contact
+    {
+      resize:none; 
+    }
+  
+  
+    .second-portion
+    {
+      margin-top:50px; 
+      margin-bottom: 250px;
+    }
+  
+        @import "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css";
+  @import "http://fonts.googleapis.com/css?family=Roboto:400,500";
+  
+  .box > .icon { text-align: center; position: relative; }
+  .box > .icon > .image { position: relative; z-index: 2; margin: auto; width: 88px; height: 88px; border: 8px solid white; line-height: 88px; border-radius: 50%; background: #00bfff; vertical-align: middle; }
+  .box > .icon:hover > .image { background: #fdb801; }
+  .box > .icon > .image > i { font-size: 36px !important; color: #fff !important; }
+  .box > .icon:hover > .image > i { color: white !important; }
+  .box > .icon > .info { margin-top: -24px; background: rgba(0, 0, 0, 0.04); border: 1px solid #e0e0e0; padding: 15px 0 10px 0; min-height:163px; width: 300px;}
+  .box > .icon:hover > .info { background: rgba(0, 0, 0, 0.04); border-color: #e0e0e0; color: white; }
+  .box > .icon > .info > h3.title { font-family: "Robot",sans-serif !important; font-size: 16px; color: #222; font-weight: 700; }
+  .box > .icon > .info > p { font-family: "Robot",sans-serif !important; font-size: 13px; color: #666; line-height: 1.5em; margin: 20px;}
+  .box > .icon:hover > .info > h3.title, .box > .icon:hover > .info > p, .box > .icon:hover > .info > .more > a { color: #222; }
+  .box > .icon > .info > .more a { font-family: "Robot",sans-serif !important; font-size: 12px; color: #222; line-height: 12px; text-transform: uppercase; text-decoration: none; }
+  .box > .icon:hover > .info > .more > a { color: #fff; padding: 6px 8px; background-color: #63B76C; }
+  .box .space { height: 30px; }
+  
+  @media only screen and (max-width: 768px)
+  {
+  .contact-form
+  {
+    margin-top:25px; 
+  }
+  
+  .btn-send
+  {
+    width: 100%;
+    padding:10px; 
+  }
+  
+  .second-portion
+  {
+    margin-top:25px; 
+  }
+  }
+  /* Conatct end */

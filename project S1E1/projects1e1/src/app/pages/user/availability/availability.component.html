@@ -1,0 +1,22 @@
+<div class="bread"> <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/user" routerLinkActive="router-link-active" >Home</a></li>
+      <li class="breadcrumb-item"><a routerLink="/user/viewVenues" routerLinkActive="router-link-active" > Venues </a></li>
+      <li class="breadcrumb-item active" aria-current="page">Availability</li>
+    </ol>
+  </nav></div>
+  
+<div  class="container">
+    <div *ngIf="dates.length==0" class="red">
+        <div  class="yellow">This Venue is Not have any Upcoming Booking Date Yet</div>
+</div>
+    <div *ngIf="dates.length!=0" class="red">
+        <div  class="yellow">This Venue is Already Booked for Following Dates</div>
+    </div >
+<div class="green">
+    <div class="yellow2">
+        <div class="black mb-2 text-center" *ngFor="let date of dates"> {{date}}</div>
+    </div>
+</div> 
+<button routerLink="/user/viewVenues" class="btn">Back</button>  
+</div>

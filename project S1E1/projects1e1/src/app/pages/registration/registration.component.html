@@ -1,0 +1,140 @@
+<div class="navbarc fixed-top">
+<app-navbar></app-navbar>
+</div>
+<div class="container-fluid">
+    
+<div class="mb-30">
+<div class="container pt-3 con2" >
+    <h2 class="text-center">
+            <img src="https://www.kindpng.com/picc/m/237-2370268_blue-register-icon-png-transparent-png.png" class="profile">
+    </h2>
+    <div class="card-body">
+
+        <form #memberForm="ngForm" (ngSubmit)="doRegistration()">
+
+            <!-- Select Role Fiels-->
+            <select (blur)="validateRole(role.value)" (change)="validateRole(role.value)" 
+            name="role" [(ngModel)]="member.role" class="form-select form-control " 
+            [class.is-invalid]="roleHasError && role.touched"
+            #role="ngModel" >
+                <option selected disabled>Select Role</option>
+                <option value="user">User</option>
+                <option value="organizer">Organizer</option>
+              </select>
+              <small class="text-danger" [class.d-none]="!roleHasError || role.untouched">Please select a role</small>
+              
+              
+        
+        <!-- First Name-->
+        <div class="input-group form-group mt-3 ">
+            <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+              </svg></span>
+
+            <input #firstName="ngModel" id="firstNameId" name="firstName" [(ngModel)]="member.firstName" 
+            minlength="3" type="text"  
+            class="form-control " placeholder="First Name" aria-label="First Name"
+            [class.is-invalid]="firstName.invalid && firstName.touched"  required>
+          </div>
+          <div *ngIf="firstName.errors && (firstName.invalid && firstName.touched)">
+            <small class="text-danger" *ngIf="firstName.errors.required">First Name can not be empty</small>
+            <small class="text-danger" *ngIf="firstName.errors.minlength">First name should contain at least 3 characters</small>
+            </div>
+          
+          
+          
+
+
+          <!-- Last Name-->
+          <div class="input-group form-group mt-3 ">
+            <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+              </svg></span>
+
+            <input #lastName="ngModel" name="lastName" [(ngModel)]="member.lastName" type="text" 
+            class="form-control" placeholder="Last Name" aria-label="Last Name"  
+            [class.is-invalid]="lastName.invalid && lastName.touched" required>
+          </div>
+          <small class="text-danger" [class.d-none]="lastName.valid || lastName.untouched">Last name is required</small>
+
+        
+
+
+
+
+         <!-- Email -->
+          <div class="input-group form-group mt-3">
+            <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+              </svg></span>
+
+            <input #email="ngModel" name="email" [(ngModel)]="member.email" type="email" 
+            class="form-control" placeholder="Email" aria-label="Email"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  
+            [class.is-invalid]="email.invalid && email.touched" required>
+          </div>
+          <div *ngIf="email.errors && (email.invalid && email.touched)">
+            <small class="text-danger" *ngIf="email.errors.required">Email can not be empty</small>
+            <small class="text-danger" *ngIf="email.errors.pattern">Please provide valid email</small>
+            </div>
+
+
+           <!-- Phone Number -->
+           <div class="input-group form-group mt-3">
+            <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+              </svg></span>
+
+            <input #phoneNumber="ngModel" name="phoneNumber" [(ngModel)]="member.phoneNumber" type="tel" 
+            class="form-control" placeholder="Phone Number" aria-label="Phone Number"
+            pattern="[7-9]{1}[0-9]{9}"  
+            [class.is-invalid]="phoneNumber.invalid && phoneNumber.touched" required>
+          </div>
+          <div *ngIf="phoneNumber.errors && (phoneNumber.invalid && phoneNumber.touched)">
+          <small class="text-danger" *ngIf="phoneNumber.errors.required">Phone number is required</small>
+          <small class="text-danger" *ngIf="phoneNumber.errors.pattern">Phone number must be 10 digits and start with 7,8 or 9</small>
+          </div>
+
+          
+          
+          <!-- Password -->
+          <div class="input-group form-group mt-3 col">
+            <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+              </svg></span>
+
+            <input #password="ngModel" name="password" [(ngModel)]="member.password" type="password" 
+            class="form-control"  placeholder="Password" aria-label="Password"
+            pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" 
+            [class.is-invalid]="password.invalid && password.touched" required>
+          </div>
+          <div *ngIf="password.errors && (password.invalid && password.touched)">
+            <small class="text-danger" *ngIf="password.errors.required">Password is required</small>
+            <small class="text-danger" *ngIf="password.errors.pattern">Password must have minimum six characters, at least one letter and one number </small>
+            </div>
+
+          <!--Confirm Password -->
+          <div class="input-group form-group mt-3 col">
+            <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+              </svg></span>
+            
+            <input #cp="ngModel" name="confirmPassword" [(ngModel)]="confirmPassword" type="password" 
+            class="form-control " placeholder="Confirm Password" aria-label="Confirm Password" 
+            [class.is-invalid]="cp.invalid && cp.touched" required>
+          </div>
+       
+
+
+         <!--Sumbmit button -->
+         <div class="text-center mt-3">
+        <input [disabled]="memberForm.form.invalid" type="submit" value="REGISTER"class="btn me-2">
+        <a  routerLink="/login" class="btn ms-2">Cancel</a>
+        </div>
+    </form>
+    
+    </div>
+</div>
+</div>
+</div>

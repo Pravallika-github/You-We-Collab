@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="text-center"> <a  [routerLink]="'/organizer/venueDetails/'+venueId+'/addEquipment/'+venueId" ><button type="button" 
+    class="btn btn-outline-success mb-2 taba1">Add Equipment</button></a> </div>
+      
+      <table class="table">
+        
+        <tr class="text-center" *ngFor="let equipment of equipments" >
+            <td >{{equipment.equipmentName}}</td>
+            <td >{{equipment.equipmentCost}}</td>
+            <td>
+            <a ><button [routerLink]="'/organizer/venueDetails/'+venueId+'/updateEquipment/'+equipment.equipmentId"  class="btn btn-warning taba2 mt-1 mb-1  me-2">Update</button></a>
+            <a ><button (click)="deleteEquipment(equipment.equipmentId)" class="btn btn-danger taba3 mt-1 mb-1">Delete</button></a>
+            </td>
+          </tr>
+        
+      </table>
+      
+    </div>
+    

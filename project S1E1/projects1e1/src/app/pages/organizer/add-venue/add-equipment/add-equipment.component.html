@@ -1,0 +1,28 @@
+<form #equipmentForm="ngForm" (ngSubmit)="addEquipment()">
+  <table class="table">
+    <!--Equipment Name-->
+    <tr>
+      <td class="tc1 form-label">Equipment Name</td>
+      <td class="tc2">
+        <input [(ngModel)]="equipment.equipmentName" type="text" name="equipmentName"
+        #eqName="ngModel" required class="formCon"></td>
+    </tr>
+    <tr *ngIf="eqName.invalid && eqName.touched"><td></td>
+      <td class="text-danger">Equipment name can not be empty</td></tr>
+
+    <!--Equipment Cost-->
+    <tr>
+      <td class="tc1">Equipment Cost</td>
+      <td class="tc2">
+        <input [(ngModel)]="equipment.equipmentCost" type="number" name="equipmentCost"
+         #eqCost="ngModel" required min=100 class="formCon"></td>
+    </tr>
+  
+  <tr *ngIf="eqCost.invalid && eqCost.touched"><td></td>
+    <td class="text-danger">Equipment cost can not be less than 100</td></tr>
+   
+  </table>
+  <div class="text-center mt-3">
+    <input type="submit" [disabled]="equipmentForm.form.invalid" class="btn" value="ADD">
+</div>
+</form>

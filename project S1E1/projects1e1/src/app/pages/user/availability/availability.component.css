@@ -1,0 +1,44 @@
+.bread{
+    margin-top: 75px;
+}
+.red{
+   margin: auto;
+    background-color: red;
+    text-align: center;
+    padding: 2px 2px 2px 2px;
+    margin-bottom: 10px;
+}
+.yellow{
+    background-color: yellow;
+    padding: 2px 2px 2px 2px;
+   
+    
+}
+.container{
+    padding-top: 5%;
+    max-width: 60%;
+    text-align: center;
+}
+.yellow2{
+    background-color: yellow;
+    padding: 2px 2px 2px 2px;
+    max-width: 40%;
+    margin: auto;
+    
+}
+.black{
+    margin-top: 10px;
+    background-color: black;
+    color: yellow;
+}
+.green{
+    background-color: green;
+    margin: auto;
+    text-align: center;
+    padding: 2px 2px 2px 2px;
+    margin-bottom: 10px;
+}
+.btn{
+    background-color: coral;
+    font-weight: bold;
+}

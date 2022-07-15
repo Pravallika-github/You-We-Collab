@@ -1,0 +1,139 @@
+<div class="bread">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a routerLink="/user" routerLinkActive="router-link-active" >Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Book Event</li>
+        </ol>
+      </nav>
+</div>
+
+<div>
+
+    <div class=" container page">
+        <h4 class=" white text-center">BOOK AN EVENT</h4>
+        <!-- Select Place-->
+        <div class="attribute row ">
+            <div class="col-5" >PLACE</div>
+            <div class="col-7">
+                <select class="form-control " (change)="onSelectPlace($event)">
+                    <option selected disabled>Select Place </option>
+                    <option *ngFor="let place of places">{{place}}</option>
+                </select>
+    
+            </div>   
+        </div>
+
+    <!-- Select Venue-->
+    <div class="attribute row">
+        <div class="col-5" >VENUE</div>
+        <div class="col-7">
+            <select #venueId="ngModel" [(ngModel)]="booking.venueId" name="venueId"
+            class="form-control" (change)="onSelectVenue($event)">
+                <option disabled>Select Venue</option>
+                <option *ngFor="let venue of venues" [value]="venue.venueId" >{{venue.venueName}}</option>
+           </select>
+           <small class="text-danger" [class.d-none]="!venueHasError || venueId.untouched">Please select a Venue</small> 
+        </div>
+    </div>
+
+    <!-- Select Event-->
+    <div class="attribute row">
+        <div class="col-5" >EVENT</div>
+        <div class="col-7">
+            <select #eventId="ngModel"
+            (change)="onSelectedEvent($event)"
+             [(ngModel)]="booking.eventName" name="eventName"
+            class="form-control">
+                <option disabled>Select Event</option>
+                <option *ngFor="let event of events" 
+                [value]="event.eventName" >{{event.eventName}}</option>
+           </select>
+           <small class="text-danger" [class.d-none]="!eventHasError || eventId.untouched">Please select an Event</small> 
+        </div>      
+    </div>
+
+    <!-- Select Date-->
+    <div class="attribute row">
+        <div class="col-5" >DATE</div>
+        <div class="col-7">
+            <input #date="ngModel" required [(ngModel)]="booking.date"
+             class="form-control"  type="date" min={{minDate}}>
+             <small class="text-danger" [class.d-none]="date.valid || date.untouched">Date is required</small>
+        </div>      
+    </div>
+
+
+
+
+
+
+     <!-- Select Guest Count-->
+    <div class="attribute row">
+        <div class="col-5" >NUMBER OF GUEST</div>
+        <div class="col-7">
+            <input 
+            #guest="ngModel" [(ngModel)]="booking.guestCount"
+            class="form-control" min=10 type="number" >
+            <small class="text-danger" [class.d-none]="!guest.errors || guest.untouched ">Minimum 10 guests are required</small>
+
+        </div>   
+ 
+    </div>
+
+
+    </div>
+    <!-- BUTTON TO BOOK EVENT-->
+    <div class="butdiv">
+    <button (click)="bookEvent()"
+    [class.disabled]="guest.errors || eventHasError || date.errors " class="btn">BOOK EVENT</button>
+    </div>
+
+
+    <div *ngIf="events!=null" class="container mt-3 page2">
+
+        
+        <div class="row">
+            <!-- Select Food Items-->
+            <div class="col text-center">Food Items<br>
+                <div class="align" *ngFor="let foodItem of foodItems">
+                    <input (change)="onSelectfoodItems($event,foodItem)"
+                    type="checkbox" 
+                [value]="foodItem.foodItemId" ><span> {{foodItem.foodItemName}}</span>
+                </div>
+                
+            </div>
+
+             <!-- Select Equipments-->
+            <div class="col text-center">Equipments<br>
+                <div class="align" *ngFor="let equipment of equipments">
+                <input (change)="onSelectEquipments($event,equipment)"
+                 type="checkbox" 
+                [value]="equipment.equipmentId"><span> {{equipment.equipmentName}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-3 mb-3 page">
+    <div class="row attribute">
+        <div class="col">EVENT COST</div>
+        <div class="col">{{eventCost}}</div>
+    </div>
+
+    <div class="row attribute">
+        <div class="col">FOOD COST</div>
+        <div class="col">{{foodCost*booking.guestCount}}</div>
+    </div>
+
+    <div class="row attribute">
+        <div class="col">EQUIPMENT COST</div>
+        <div class="col">{{equipmentCost}}</div>
+    </div>
+
+    <div class="row attribute">
+        <div class="col">TOTAL COST</div>
+        <div class="col">{{eventCost+equipmentCost+foodCost*booking.guestCount}}</div>
+    </div>
+
+</div>
+

@@ -1,0 +1,54 @@
+.card {
+    width: 50%;
+    margin: auto;
+}
+.profile{
+    height: 100px;
+    width: 100px;
+    align-items: center;
+}
+.container-fluid{
+   background-image: url("https://media.istockphoto.com/photos/close-up-on-group-of-gold-color-of-rolling-ribbon-and-confetti-on-picture-id1287182265?k=20&m=1287182265&s=612x612&w=0&h=MPr0kX_g_-zftIWMYM-iTnGghoXzhlyORIUTwOad5lw=");
+        padding-top: 5%;
+    padding-bottom: 20px;
+}
+.white{
+    max-width: 60%;
+    margin: auto;
+    margin-top: 20%;
+    position: inherit;
+}
+.btn{
+    background-color: rgb(5, 5, 5);
+    font-weight: bold;
+    font-size: large;
+    background: #83a4d4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.btn2{
+    background-color: rgb(5, 5, 5);
+    font-weight: bold;
+    font-size: large;
+    background: #83a4d4;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.btn:hover {
+   color: black;
+        background: #2980b9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #2c3e50, #2980b9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #2c3e50, #2980b9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
+  .btn2:hover {
+    color: black;
+        background: #2980b9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #2c3e50, #2980b9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #2c3e50, #2980b9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }

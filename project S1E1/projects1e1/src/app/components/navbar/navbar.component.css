@@ -1,0 +1,23 @@
+.navbar {
+    background: #000428;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.navbar-brand {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+.navbar-brand:hover{
+    font-weight: bold;
+    color: rgb(228, 251, 126);
+
+}
+.cust {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.cust:hover{
+    color: rgb(228, 251, 126);
+}

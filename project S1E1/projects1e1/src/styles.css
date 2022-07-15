@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+.mt-20{
+    margin-top: 20px;
+}
+.mb-30{
+    margin-bottom: 30px;
+}
+.mainContent{
+    margin-left: 230px;
+}
+
+.sidebar{
+	height: 100%;
+    width: 220px;
+  position: fixed;
+  left: 0;
+  background-color:#7000cccc;
+  padding-top: 20px;
+}
+.sidebar a{
+    color: white;
+    display:block;
+    width: 100%;
+    padding: 10px 25px;
+    text-decoration: none;
+    
+}
+.sidebar .divider{
+	height: 3px;
+	width: 100%;
+	background:white;
+	margin-top: 10px;
+}
+.sidebar .cross{
+	position: absolute;
+	top: 0;
+	right: 35px;
+	font-size: 36px;
+	cursor: pointer;
+}
+.sidebar a:hover{
+	background: #24248f;
+}
+.list{
+	margin-top: 1em;
+}
+
+
+
+@Media only screen and (max-width: 600px){
+	.sidebar{
+	display: none;
+	width:80%;
+	height: 100vh;
+	position: fixed;
+	padding-top: 20px;
+	margin-top:5em;
+	}
+	.mainContent{
+        margin-left: 10px;
+    }
+}

@@ -1,0 +1,20 @@
+.bread{
+    margin-top: 75px;
+}
+.container{
+    background-color: rgb(104, 48, 90);
+    max-width: 80%;
+    color: rgb(255, 255, 255);
+    padding: 5 5 5 5px;
+}
+.btn{
+    background-color: rgb(38, 90, 8);
+    color: yellow;
+    font-weight: bold;
+}
+.btn:hover{
+    background-color: rgb(0, 255, 128);
+}
+.container:hover{
+    background-color: rgb(149, 32, 165);
+}

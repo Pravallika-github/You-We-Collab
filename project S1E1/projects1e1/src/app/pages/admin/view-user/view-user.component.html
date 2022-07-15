@@ -1,0 +1,22 @@
+<div class="bread">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a routerLink="/admin" routerLinkActive="router-link-active" >Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Users</li>
+        </ol>
+      </nav>
+  </div>
+<div class="container">
+    <h3 class="text-center">USERS</h3>
+    <div *ngFor="let user of users" class="violet body mb-2">
+        <div class="yellow body">
+            <div class="row blue">
+                <div class="col-2 column">{{user.memberId}}</div>
+                <div class="col-6 column ">{{user.firstName}} {{user.lastName}}</div>
+                <div class="col-4 column"> 
+                    <button [routerLink]="'/admin/profile/'+user.memberId"
+                    class="btn btn1 mb-1 mt-1 me-2">VIEW</button>
+            </div>
+        </div>
+    </div>
+</div>

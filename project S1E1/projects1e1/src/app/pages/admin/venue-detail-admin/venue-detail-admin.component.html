@@ -1,0 +1,41 @@
+<div class="bread">
+       <nav aria-label="breadcrumb">
+           <ol class="breadcrumb">
+             <li class="breadcrumb-item"><a routerLink="/admin" routerLinkActive="router-link-active" >Home</a></li>
+             <li class="breadcrumb-item"><a routerLink="/admin/viewVenues" routerLinkActive="router-link-active" >Venues</a></li>
+             <li class="breadcrumb-item active" aria-current="page">Details</li>
+           </ol>
+         </nav>
+     </div>
+<div class="container">
+    <div class="heading pb-2">
+       <h3 class="text-center">Venue Details</h3>
+           <div class="text-center mt-3 mb-2">
+                <div class="row mb-2">
+                   <div class="col">Name</div>
+                   <div class="col">{{venue.venueName}}</div>
+            </div>
+            <div class="row mb-2">
+                   <div class="col">Place</div>
+                   <div class="col">{{venue.venuePlace}}</div>
+            </div>
+            <div class="row mb-2">
+                   <div class="col">Contact</div>
+                   <div class="col">{{venue.venueContact}}</div>
+            </div>               
+        
+        
+            <div class="mt-3 mb-3 tabs text-center ps-3">
+              <button [routerLink]="'events/'+venue.venueId" class="tab1">EVENTS</button>
+              <button [routerLink]="'foodItems/'+venue.venueId" class="tab2">FOOD ITEMS</button>
+              <button [routerLink]="'equipments/'+venue.venueId" class="tab3">EQUIPMENTS</button>
+            </div >
+        </div>
+    </div>
+    <div><router-outlet></router-outlet></div>
+              
+         
+         
+        
+        
+       

@@ -1,0 +1,22 @@
+.center{
+    margin-left: 20%;
+    background-color: brown;
+    max-width: 50%;
+    margin-top: 10%;
+    border-radius: 3%;
+    padding-bottom: 5px;
+    color: rgb(243, 239, 13);
+}
+.container{
+    position: fixed;
+}
+.btn{
+    background-color: rgb(255, 0, 200);
+    color: white;
+    font-weight: bold;
+}
+.btn2{
+    background-color: rgb(145, 255, 0);
+    color: white;
+    font-weight: bold;
+}

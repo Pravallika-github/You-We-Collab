@@ -1,0 +1,36 @@
+.bread{
+    margin-top: 75px;
+}
+.container{
+    padding-top: 4%;
+    margin: auto;
+    max-width: 70%;
+}
+
+.body{
+    border-radius: 2%;
+}
+.yellow{
+    background-color: yellow;
+    padding: 2px 2px 2px 2px;
+}
+.blue{
+    background-color: rgb(11, 11, 63);
+    color: yellow;
+}
+.violet{
+    background-color: rgb(11, 11, 63);
+    padding: 3px 3px 3px 3px;
+}
+.row{
+    
+    margin: auto;
+}
+.btn{
+    background-color: darkorange;
+}
+.column{
+    text-align: center;
+    margin: auto;
+    font-size: large;
+}

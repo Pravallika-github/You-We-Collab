@@ -1,0 +1,44 @@
+.bread{
+    margin-top: 75px;
+}
+.line{
+    background-color: black;
+    height: 2px;
+    margin-bottom: 5px;
+}
+.col1{
+    max-width: 60%;
+    background-color: aqua;
+}
+.container{
+    padding-top: 2%;
+    padding-left: 5%;
+    max-width: 50%;
+    margin: auto;
+}
+.con1{
+    background-color: cornflowerblue;
+    box-shadow: 20px;
+}
+.con2{
+    background-color: rgb(47, 7, 85);
+    color: rgb(230, 215, 10);
+}
+.fixed{
+    padding-top: 2%;
+}
+.btn{
+    background-color: crimson;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.btn2{
+    background-color: rgb(148, 11, 182);
+    color: white;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.btn:hover{
+    background-color: rgb(194, 12, 179);
+}

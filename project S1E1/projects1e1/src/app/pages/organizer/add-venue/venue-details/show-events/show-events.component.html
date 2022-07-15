@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="text-center"> <a  [routerLink]="'/organizer/venueDetails/'+venueId+'/addEvent/'+venueId" ><button type="button" 
+  class="btn  taba1 mb-2 ">Add Event</button></a> </div>
+  
+    <table class="table">
+      
+        <tr class="text-center" *ngFor="let event of events" >
+          <td >{{event.eventName}}</td>
+          <td >{{event.eventCost}}</td>
+          <td>
+          <a ><button [routerLink]="'/organizer/venueDetails/'+venueId+'/updateEvent/'+event.eventId"  
+            class="btn btn-warning taba2 mt-1 mb-1 me-2">Update</button></a>
+          <a ><button (click)="deleteEvent(event.eventId)" 
+            class="btn btn-danger taba3 mt-1 mb-1">Delete</button></a>
+          </td>
+        </tr>
+      
+    </table>
+    
+  </div>
+  

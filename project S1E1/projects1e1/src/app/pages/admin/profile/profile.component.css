@@ -1,0 +1,67 @@
+.container{
+    padding-top: 4%;
+    margin: auto;
+    max-width: 70%;
+}
+
+.body{
+    border-radius: 2%;
+    margin-bottom: 5px;
+}
+.yellow{
+    background-color: yellow;
+    padding: 2px 2px 2px 2px;
+}
+.blue{
+    background-color: rgb(11, 11, 63);
+    color: yellow;
+}
+.violet{
+    background-color: rgb(11, 11, 63);
+    padding: 5px 5px 5px 5px;
+}
+.row{
+    
+    margin: auto;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+}
+.btn{
+    background-color: darkorange;
+}
+.column{
+    text-align: center;
+    margin: auto;
+    font-size: large;
+}
+.line{
+    background-color: white;
+    height: 2px;
+    max-width: 85%;
+    margin: auto;
+}
+.head{
+    border-radius: 50%;
+    background-color:rgb(11, 11, 63);
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    padding: 2px 2px 2px 2px;
+}
+.headY{
+    background-color: yellow;
+    padding: 2px 2px 2px 2px;
+    margin: auto;
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+}
+.headB{
+    background-color: rgb(11, 11, 63);
+    border-radius: 50%;
+    margin: auto;
+    height: 85px;
+    width: 85px;
+    padding: 2px 2px 2px 2px;
+}

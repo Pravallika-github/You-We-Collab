@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="text-center"> <a  [routerLink]="'/organizer/venueDetails/'+venueId+'/addFoodItem/'+venueId" ><button type="button" 
+    class="btn btn-outline-success taba1 mb-2 ">Add Food</button></a> </div>
+      
+      <table class="table">
+        
+        <tr class="text-center" *ngFor="let foodItem of foodItems" >
+            <td >{{foodItem.foodItemName}}</td>
+            <td >{{foodItem.foodItemCost}}</td>
+            <td>
+            <a ><button [routerLink]="'/organizer/venueDetails/'+venueId+'/updateFoodItem/'+foodItem.foodItemId" class="btn btn-warning taba2 mt-1 mb-1  me-2">Update</button></a>
+            <a ><button (click)="deleteFoodItem(foodItem.foodItemId)" class="btn btn-danger taba3 mt-1 mb-1">Delete</button></a>
+            </td>
+          </tr>
+        
+      </table>
+      
+    </div>
+    
